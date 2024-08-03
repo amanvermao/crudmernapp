@@ -11,6 +11,10 @@ const cors = require("cors");
 const router = require('./routes/router'); 
 
 app.use(cors());
+app.get('/',(req,res)=>{
+  res.json("server started")
+
+})
 app.use(express.json());
 
 app.use('/uploads', express.static('uploads')); 
