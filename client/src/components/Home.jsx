@@ -7,7 +7,7 @@ const Home = () => {
   console.log(userdata);
 
   const getData = async (e) => {
-    const res = await fetch('http://localhost:8003/getdata', {
+    const res = await fetch('https://newcrudmernapp-backend.onrender.com/getdata', {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -31,7 +31,7 @@ const Home = () => {
   }, [])
 
   const deleteuser = async (id) => {
-    const res2 = await fetch(`http://localhost:8003/deleteuser/${id}`, {
+    const res2 = await fetch(`https://newcrudmernapp-backend.onrender.com/deleteuser/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -77,7 +77,7 @@ const Home = () => {
                   <td>{element.work}</td>
                   <td>{element.mobile}</td>
                   <td>
-                    {element.image && <img src={`http://localhost:8003/${element.image}`} alt="profile" width="50" />}
+                    {element.image && <img src={`https://newcrudmernapp-backend.onrender.com/${element.image}`} alt="profile" width="50" />}
                   </td>
                   <td>
                     <button onClick={() => deleteuser(element._id)} type="button" className="btn btn-danger">delete</button>

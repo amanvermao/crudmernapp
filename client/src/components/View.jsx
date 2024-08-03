@@ -7,7 +7,7 @@ const View = () => {
   const { id } = useParams();
 
   const getData = async () => {
-    const res = await fetch(`http://localhost:8003/getuser/${id}`, {
+    const res = await fetch(`https://newcrudmernapp-backend.onrender.com/getuser/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -33,7 +33,7 @@ const View = () => {
     <div className="container">
       <h1>User Details</h1>
       <div className="card">
-        {userdata.image && <img src={`http://localhost:8003/${userdata.image}`} alt="profile" width="150" />}
+        {userdata.image && <img src={`https://newcrudmernapp-backend.onrender.com/${userdata.image}`} alt="profile" width="150" />}
         <p><span className="label">Name:</span> {userdata.name}</p>
         <p><span className="label">Email:</span> {userdata.email}</p>
         <p><span className="label">Job:</span> {userdata.work}</p>

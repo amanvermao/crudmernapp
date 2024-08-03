@@ -45,7 +45,7 @@ const navigate = useNavigate()
       formData.append('image', image);
     }
 
-    const res = await fetch('http://localhost:8003/register', { 
+    const res = await fetch('https://newcrudmernapp-backend.onrender.com/register', { 
       method: "POST",
       body: formData
     });

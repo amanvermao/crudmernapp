@@ -31,7 +31,7 @@ const Edit = () => {
       const getData = async (e) => {    
     
     
-        const res = await fetch(`http://localhost:8003/getuser/${id}`, { 
+        const res = await fetch(`https://newcrudmernapp-backend.onrender.com/getuser/${id}`, { 
           method: "GET",
           headers: {
             "Content-Type": "application/json"
@@ -59,7 +59,7 @@ const Edit = () => {
         e.preventDefault()
 
         const {name, email, mobile, age, work, address, desc} =  inp;
-        const res2 = await fetch(`http://localhost:8003/updateuser/${id}`,{
+        const res2 = await fetch(`https://newcrudmernapp-backend.onrender.com/updateuser/${id}`,{
           method: "PATCH",
           headers: {
             "Content-Type": "application/json"
